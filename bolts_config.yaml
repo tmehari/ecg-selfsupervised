@@ -1,0 +1,65 @@
+batch_size: 8192
+epochs: 100
+warm_up: 10
+eval_every_n_epochs: 1
+fine_tune_from: None
+log_every_n_steps: 50
+lr : 0.00229
+weight_decay: 10e-6
+precision: 32
+log_dir: './logs'
+debug: False
+
+model:
+  out_dim: 16
+  base_model: "xresnet1d50"
+  hidden: True
+  widen: 1.0
+
+loss:
+  temperature: 0.5
+  use_cosine_similarity: True
+
+dataset:
+  s: 1
+  input_shape: (12, 333) #(96,96,3)
+  num_workers: 0
+  valid_size: 0.05
+  data_folder:    "./data/ptb_xl_fs100"  # "./data/cinc_fs100"
+  target_folders: ["./data/cinc_fs100", "./data/zheng_fs100", "./data/ribeiro_fs100"]
+  target_fs: 100
+  recreate_data_ptb_xl: False
+  filter_cinc: False
+  ptb_xl_label: "label_all"
+  
+
+eval_epochs: 50
+eval_every: 200
+eval_batch_size: 512
+lin_eval_every_n_epochs: 1
+eval_lr: 3e-2
+eval_wd: 1e-1
+perform_lin_eval: True
+perform_fine_tuning: True
+eval_mode: "fine_tuning"
+eval_gradual_freezing: False
+
+eval_dataset:
+  s: 1
+  input_shape: (12, 250) #(96,96,3)
+  num_workers: 8
+  valid_size: 0.05
+  data_folder:   "./data/ptbxl"
+  target_folders: ["./data/ptb_xl_fs100"]
+  target_fs: 100
+  recreate_data_ptb_xl: False
+  ptb_xl_label: "label_all"       #------V------
+                                  # label_all 71
+                                  # label_diag 44
+                                  # label_form 19
+                                  # label_rhythm 12
+                                  # label_diag_subclass 23
+                                  # label_diag_superclass 5
+
+
+  
