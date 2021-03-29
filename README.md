@@ -1,6 +1,20 @@
 # Self-supervised representation learning from 12-lead ECG data
 This is  the offical code repository accompanying our paper on **Self-supervised representation learning from 12-lead ECG data**.
 
+For a detailed description of technical details and experimental results, please refer to our paper:
+
+Temesgen Mehari, and Nils Strodthoff, [Self-supervised representation learning from 12-lead ECG data](https://arxiv.org/abs/2103.12676), arXiv preprint 2103.12676, 2021.
+    
+    @article{Mehari:2021Self,
+    title={Self-supervised representation learning from 12-lead ECG data},
+    author={Mehari, Temesgen and Strodthoff, Nils},
+    eprint={2103.12676},
+    journal={arXiv preprint 2103.12676},
+    archivePrefix={arXiv},
+    primaryClass={eess.SP},
+    year={2021}
+    }
+
 ## Usage information
 ### Preparation
 1. install dependencies from `ecg_selfsupervised.yml` by running `conda env create -f ecg_selfsupervised.yml` and activate the environment via `conda activate ecg_selfsupervised`
