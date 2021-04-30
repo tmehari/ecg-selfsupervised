@@ -156,7 +156,7 @@ class LightningCPC(pl.LightningModule):
         
         chunkify_valtest = True
         chunk_length_valtest = self.hparams.input_size if chunkify_valtest else 0
-        stride_valtest = self.hparams.input_size
+        stride_valtest = self.hparams.input_size//2
 
         train_datasets = []
         val_datasets = []
