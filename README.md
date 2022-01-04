@@ -3,16 +3,22 @@ This is  the offical code repository accompanying our paper on **Self-supervised
 
 For a detailed description of technical details and experimental results, please refer to our paper:
 
-Temesgen Mehari, and Nils Strodthoff, [Self-supervised representation learning from 12-lead ECG data](https://arxiv.org/abs/2103.12676), arXiv preprint 2103.12676, 2021.
+Temesgen Mehari, and Nils Strodthoff, [Self-supervised representation learning from 12-lead ECG data](https://doi.org/10.1016/j.compbiomed.2021.105114), Computers in Biology and Medicine **141** (2022) 105114.
     
     @article{Mehari:2021Self,
-    title={Self-supervised representation learning from 12-lead ECG data},
-    author={Mehari, Temesgen and Strodthoff, Nils},
-    eprint={2103.12676},
-    journal={arXiv preprint 2103.12676},
-    archivePrefix={arXiv},
-    primaryClass={eess.SP},
-    year={2021}
+        doi = {10.1016/j.compbiomed.2021.105114},
+        url = {https://doi.org/10.1016/j.compbiomed.2021.105114},
+        year = {2022},
+        month = feb,
+        publisher = {Elsevier {BV}},
+        volume = {141},
+        pages = {105114},
+        author = {Temesgen Mehari and Nils Strodthoff},
+        title = {Self-supervised representation learning from 12-lead {ECG} data},
+        journal = {Computers in Biology and Medicine},
+        eprint = {2103.12676},
+        archivePrefix={arXiv},
+        primaryClass={eess.SP}
     }
 
 ## Usage information
@@ -91,5 +97,5 @@ The script prints the results and saves the finetuned model in a new folder next
 
 
 ## Pretrained models
-Will be provided...
+For each method (SimCLR, BYOL, CPC), we provide the best-performing pretrained model after pretraining on *All*: [link to datacloud](https://cloud.uol.de/s/WyfdBXt64DWJaSc). More models are available from the authors upon request.
 
